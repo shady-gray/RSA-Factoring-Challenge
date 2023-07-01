@@ -1,16 +1,13 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import time
     import sys
     read_file = __import__('read_file').read_file
-    get_multiples = __import__('get_multiples').get_multiples
-    
-    st = time.time()
+    find_factors = __import__('find_factors').find_factors
+
     num_list = read_file(sys.argv[1])
     for n in num_list:
-        n_factors = get_multiples(n)
+        n_factors = find_factors(n)
         if len(n_factors) == 1:
             print("{:d}={:d}*{:d}".format(n, n_factors[0], n_factors[0]))
         elif len(n_factors) == 2:
             print("{:d}={:d}*{:d}".format(n, n_factors[1], n_factors[0]))
-print(time.time() - st)
