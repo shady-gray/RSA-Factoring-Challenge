@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import time
+
+
+def find_factors(number):
+    mulList = []
+    for div in range(2, 1 + int(number ** 0.5)):
+        if (number % div) == 0:
+            mulList.append(div)
+            quotient = number // div
+            if quotient != div and div * quotient == number:
+                mulList.append(quotient)
+            break
+        else:
+            continue
+    return mulList
