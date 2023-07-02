@@ -45,6 +45,7 @@ def get_prime(number):
                         continue
                 else:
                     continue
+            break
         else:
             continue
     return primeList
