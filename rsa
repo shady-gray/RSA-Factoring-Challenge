@@ -12,4 +12,3 @@ if __name__ == "__main__":
         elif len(f) == 2:
             print("{:d}={:d}*{:d}".format((f[-1] * f[0]), f[-1], f[0]))
     print()
-
