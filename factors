@@ -6,8 +6,5 @@ if __name__ == "__main__":
 
     num_list = read_file(sys.argv[1])
     for n in num_list:
-        n_factors = find_factors(n)
-        if len(n_factors) == 1:
-            print("{:d}={:d}*{:d}".format(n, n_factors[0], n_factors[0]))
-        elif len(n_factors) == 2:
-            print("{:d}={:d}*{:d}".format(n, n_factors[1], n_factors[0]))
+        p = find_factors(n)
+        print("{:d}={:d}*{:d}".format((p[-1] * p[0]), p[-1], p[0]))
