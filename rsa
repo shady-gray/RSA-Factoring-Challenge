@@ -2,11 +2,11 @@
 if __name__ == "__main__":
     import sys
     read_file = __import__('read_file').read_file
-    find_factors = __import__('find_factors').find_factors
+    get_prime = __import__('find_factors','get_prime').get_prime
 
     num_list = read_file(sys.argv[1])
     for n in num_list:
-        n_factors = find_factors(n)
+        n_factors = get_prime(n)
         if len(n_factors) == 1:
             print("{:d}={:d}*{:d}".format(n, n_factors[0], n_factors[0]))
         elif len(n_factors) == 2:
